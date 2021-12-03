@@ -28,13 +28,18 @@ const randomNumber = getRndInteger(1,101)
 
 const randomNumbers = []
 
-// Non fermarti di generare numeri sino a che non arrivi a 5 numeri (while)
+// Non fermarti di generare numeri sino a che non arrivi a 5 numeri diversi (while)
 
 while (randomNumbers.length < 5) {
-    randomNumbers.push(randomNumber)
-    //se randomNumbers non include il numero, aggiungi il numero
+
     if (!randomNumbers.includes(randomNumber)) {
+        randomNumbers.push(randomNumber)
+    } else{
         
-    }else{}
+    }
+    
+
 }
+
 console.log(randomNumbers);
+
