@@ -80,12 +80,24 @@ function functionNascondi() {
             checkNumbers.push(checkNumber)
         }
         console.log(checkNumbers);
+
+// bisogna confrontare i singoli elementi salvati all'interno dei 2 array di numeri, se sono uguali comunicare che sono uguali altrimenti comunicare le differenze
+// ogni sincolo indice del primo array deve essere confrontato con quelli contenuti nel secondo
+        for (let i = 0; i < randomNumbers.length; i++) {
+            const verifiedNumbers = []
+            if (checkNumbers[i] == randomNumbers[i]) {
+                verifiedNumbers.push(i)
+
+                console.log(`hai indovinato i seguenti numeri ${verifiedNumbers}`);
+            
+        }
+
+
+
     }
 }
 
-// bisogna confrontare i singoli elementi salvati all'interno dei 2 array di numeri, se sono uguali comunicare che sono uguali altrimenti comunicare le differenze
 
-// ogni sincolo indice del primo array deve essere confrontato con quelli contenuti nel secondo
 
 
 
@@ -100,6 +112,15 @@ restituisce vero o falso
 
 */
 
-
+/* for (let i = 0; i < randomNumbers.length; i++) {
+    const verifiedNumbers = []
+    if (checkNumbers[i] == randomNumbers[i]) {
+        verifiedNumbers.push(i)
+        console.log(`hai indovinato i seguenti numeri ${verifiedNumbers}`);
+    }else {
+        console.log(false);
+    }
+    
+} */
 
 
