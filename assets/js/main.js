@@ -87,8 +87,10 @@ function functionNascondi() {
             const verifiedNumbers = []
             if (checkNumbers[i] == randomNumbers[i]) {
                 verifiedNumbers.push(i)
-
-                console.log(`hai indovinato i seguenti numeri ${verifiedNumbers}`);
+                console.log(`hai indovinato i seguenti numeri ${verifiedNumbers[i]}`);
+            }else {
+    
+            }
             
         }
 
