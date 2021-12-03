@@ -71,10 +71,10 @@ setTimeout(functionNascondi, 3000 );
 function functionNascondi() {
     showNumbers.innerHTML = ""
 
-    // parte un cowntdown di 30 secondi al termine del quale l'utente deve inserire i cinque numeri che ha visto a video
+    // parte un cowntdown di 5 secondi al termine del quale l'utente deve inserire i cinque numeri che ha visto a video
     setTimeout(function30Sec, 5000)
     function function30Sec() {
-        //devono essere richiesti tramite promt i 5 numeri (uno alla volta)
+        //i 5 numeri devono essere richiesti tramite prompt  (uno alla volta)
         for (let i = 0; i < 5; i++) {
         let checkNumber = parseInt(prompt('inserisci i numeri visti in precedenza'))
             checkNumbers.push(checkNumber)
@@ -83,3 +83,6 @@ function functionNascondi() {
     }
 }
 
+// bisogna confrontare i singoli elementi salvati all'interno dei 2 array di numeri, se sono uguali comunicare che sono uguali altrimenti comunicare le differenze
+
+// ogni sincolo indice del primo array deve essere confrontato con quelli contenuti nel secondo
