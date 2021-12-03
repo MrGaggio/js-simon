@@ -40,6 +40,8 @@ function getRndInteger(min, max) {
 let randomNumber = getRndInteger(1,101)
 // console.log(randomNumber);
 
+
+// array che contiene i numeri
 const randomNumbers = []
 
 
@@ -51,7 +53,6 @@ while (randomNumbers.length < 5) {
     } else{
         
     }  
-
 }
 
 console.log(randomNumbers);
@@ -61,6 +62,12 @@ console.log(randomNumbers);
 const showNumbers = document.getElementById('show')
 
 // cambiare l'hinner con i risultati contenuti nell'array
-showNumbers.innerHTML += `Questi sono i numeri da ricordare:
+showNumbers.innerHTML = `Questi sono i numeri da ricordare:
 ${randomNumbers}`
 
+
+// i numeri devono essere visibili per 3 secondi ... al passare dei 3 secondi devo cancellare l'innerHTML
+setTimeout(functionNascondi, 3000 );
+function functionNascondi() {
+    showNumbers.innerHTML = ""
+}
