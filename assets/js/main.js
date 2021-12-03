@@ -1,9 +1,12 @@
 /*
 Visualizzare in pagina 5 numeri casuali poi fateli sparire.
  Da lì parte un timer di 30 secondi.
-
-
- 
+Dopo 30 secondi l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+Consigli del giorno:
+* Pensate prima in italiano.
+* Dividete in piccoli problemi la consegna.
+* Individuate gli elementi di cui avete bisogno per realizzare il programma.
 appaiono i numeri :1234:
 spariscono i numeri dal DOM dopo qualche secondo :
 parte il conto alla rovescia di 30 secondi 
@@ -26,11 +29,6 @@ Consigli del giorno:
 
 
 
-
-
-
-
-
 // funzione che genera un numero casuale tra 1 e 100
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
@@ -41,7 +39,7 @@ let randomNumber = getRndInteger(1,101)
 // console.log(randomNumber);
 
 
-// array che contiene i numeri
+// array che contiene i numeri che vengono generati random
 const randomNumbers = []
 
 
@@ -65,9 +63,23 @@ const showNumbers = document.getElementById('show')
 showNumbers.innerHTML = `Questi sono i numeri da ricordare:
 ${randomNumbers}`
 
+//
+let checkNumbers = []
 
 // i numeri devono essere visibili per 3 secondi ... al passare dei 3 secondi devo cancellare l'innerHTML
 setTimeout(functionNascondi, 3000 );
 function functionNascondi() {
     showNumbers.innerHTML = ""
+
+    // parte un cowntdown di 30 secondi al termine del quale l'utente deve inserire i cinque numeri che ha visto a video
+    setTimeout(function30Sec, 5000)
+    function function30Sec() {
+        //devono essere richiesti tramite promt i 5 numeri (uno alla volta)
+        for (let i = 0; i < 5; i++) {
+        let checkNumber = parseInt(prompt('inserisci i numeri visti in precedenza'))
+            checkNumbers.push(checkNumber)
+        }
+        console.log(checkNumbers);
+    }
 }
+
