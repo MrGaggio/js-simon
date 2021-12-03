@@ -11,3 +11,30 @@ Consigli del giorno:
 */
 
 
+
+
+
+
+
+
+// funzione che genera un numero casuale tra 1 e 100
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+
+
+const randomNumber = getRndInteger(1,101)
+// console.log(randomNumber);
+
+const randomNumbers = []
+
+// Non fermarti di generare numeri sino a che non arrivi a 5 numeri (while)
+
+while (randomNumbers.length < 5) {
+    randomNumbers.push(randomNumber)
+    //se randomNumbers non include il numero, aggiungi il numero
+    if (!randomNumbers.includes(randomNumber)) {
+        
+    }else{}
+}
+console.log(randomNumbers);
