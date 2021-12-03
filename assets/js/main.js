@@ -63,7 +63,7 @@ const showNumbers = document.getElementById('show')
 showNumbers.innerHTML = `Questi sono i numeri da ricordare:
 ${randomNumbers}`
 
-//
+// questi sono i numeri inseriti dall'utente
 let checkNumbers = []
 
 // i numeri devono essere visibili per 3 secondi ... al passare dei 3 secondi devo cancellare l'innerHTML
@@ -86,3 +86,20 @@ function functionNascondi() {
 // bisogna confrontare i singoli elementi salvati all'interno dei 2 array di numeri, se sono uguali comunicare che sono uguali altrimenti comunicare le differenze
 
 // ogni sincolo indice del primo array deve essere confrontato con quelli contenuti nel secondo
+
+
+
+/*
+StackOverflow function
+
+a.every(item => b.includes(item)) && b.every(item => a.includes(item))
+
+
+randomNumbers.every(item => checkNumbers.includes(item)) && checkNumbers.every(item => randomNumbers.includes(item)) 
+restituisce vero o falso
+
+*/
+
+
+
+
