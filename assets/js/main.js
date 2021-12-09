@@ -83,18 +83,19 @@ function functionNascondi() {
 
 // bisogna confrontare i singoli elementi salvati all'interno dei 2 array di numeri, se sono uguali comunicare che sono uguali altrimenti comunicare le differenze
 // ogni sincolo indice del primo array deve essere confrontato con quelli contenuti nel secondo
-        for (let i = 0; i < randomNumbers.length; i++) {
-            const verifiedNumbers = []
-            if (checkNumbers[i] == randomNumbers[i]) {
-                verifiedNumbers.push(i)
-                console.log(`hai indovinato i seguenti numeri ${verifiedNumbers[i]}`);
-            }else {
+
+//Quali sono gli indici presenti in checkNumbers che lo sono anche in randomN
     
+    const verifiedNumbers = []
+        for (let i = 0; i < checkNumbers.length; i++) {
+            const element = checkNumbers[i]
+            if (checkNumbers.includes(element)) {
+                verifiedNumbers.push(element)
             }
-            
+            // RICONTROLLARE L'IF DI SERA
         }
 
-
+        showNumbers.innerHTML = `Hai indovinato ${verifiedNumbers.length} numeri`
 
     }
 }
